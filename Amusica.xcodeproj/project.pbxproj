@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0123A52ACF48AD00A16E02 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0123A42ACF48AD00A16E02 /* MusicModel.swift */; };
+		2E1277062AC0CFD000323964 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1277052AC0CFD000323964 /* MusicView.swift */; };
+		2E12770B2AC0D93A00323964 /* MusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E12770A2AC0D93A00323964 /* MusicInfo.swift */; };
+		2E12770D2AC0DC0B00323964 /* Bloodthirster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E12770C2AC0DC0B00323964 /* Bloodthirster.mp3 */; };
+		2E12770F2AC0DC3F00323964 /* The Devil In I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E12770E2AC0DC3F00323964 /* The Devil In I.mp3 */; };
+		2E1277112AC0DC5500323964 /* People = Shit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2E1277102AC0DC5500323964 /* People = Shit.mp3 */; };
 		2E1C21202AC0A87100F18804 /* AmusicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C211F2AC0A87100F18804 /* AmusicaApp.swift */; };
-		2E1C21222AC0A87100F18804 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C21212AC0A87100F18804 /* ContentView.swift */; };
+		2E1C21222AC0A87100F18804 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C21212AC0A87100F18804 /* LibraryView.swift */; };
 		2E1C21242AC0A87300F18804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1C21232AC0A87300F18804 /* Assets.xcassets */; };
 		2E1C21272AC0A87300F18804 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1C21262AC0A87300F18804 /* Preview Assets.xcassets */; };
+		2E9113252ACE037900C39453 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9113242ACE037900C39453 /* Queue.swift */; };
+		2EE7A2202AC1EEB80085C636 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A21F2AC1EEB80085C636 /* MusicManager.swift */; };
+		2EFCC8152AD0193B001D32AF /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCC8142AD0193B001D32AF /* UIImageExtension.swift */; };
+		2EFCC8172AD01989001D32AF /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCC8162AD01989001D32AF /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0123A42ACF48AD00A16E02 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		2E1277052AC0CFD000323964 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
+		2E12770A2AC0D93A00323964 /* MusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfo.swift; sourceTree = "<group>"; };
+		2E12770C2AC0DC0B00323964 /* Bloodthirster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bloodthirster.mp3; sourceTree = "<group>"; };
+		2E12770E2AC0DC3F00323964 /* The Devil In I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Devil In I.mp3"; sourceTree = "<group>"; };
+		2E1277102AC0DC5500323964 /* People = Shit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "People = Shit.mp3"; sourceTree = "<group>"; };
 		2E1C211C2AC0A87100F18804 /* Amusica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amusica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1C211F2AC0A87100F18804 /* AmusicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmusicaApp.swift; sourceTree = "<group>"; };
-		2E1C21212AC0A87100F18804 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E1C21212AC0A87100F18804 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		2E1C21232AC0A87300F18804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E1C21262AC0A87300F18804 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E6202752ACD83BE001FC1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2E9113242ACE037900C39453 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		2EE7A21F2AC1EEB80085C636 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		2EFCC8142AD0193B001D32AF /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		2EFCC8162AD01989001D32AF /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1277082AC0D05B00323964 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E1C21212AC0A87100F18804 /* LibraryView.swift */,
+				2E1277052AC0CFD000323964 /* MusicView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E1277092AC0D8FB00323964 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EFCC8162AD01989001D32AF /* Library.swift */,
+				2E12770A2AC0D93A00323964 /* MusicInfo.swift */,
+				2EFCC8142AD0193B001D32AF /* UIImageExtension.swift */,
+				2EE7A21F2AC1EEB80085C636 /* MusicManager.swift */,
+				2E0123A42ACF48AD00A16E02 /* MusicModel.swift */,
+				2E9113242ACE037900C39453 /* Queue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2E1C21132AC0A87100F18804 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +94,12 @@
 		2E1C211E2AC0A87100F18804 /* Amusica */ = {
 			isa = PBXGroup;
 			children = (
+				2E6202752ACD83BE001FC1F4 /* Info.plist */,
 				2E1C211F2AC0A87100F18804 /* AmusicaApp.swift */,
-				2E1C21212AC0A87100F18804 /* ContentView.swift */,
+				2E1277092AC0D8FB00323964 /* Models */,
+				2E1277082AC0D05B00323964 /* Views */,
 				2E1C21232AC0A87300F18804 /* Assets.xcassets */,
+				2EA622612ACAFDFF009DE369 /* Library */,
 				2E1C21252AC0A87300F18804 /* Preview Content */,
 			);
 			path = Amusica;
@@ -65,6 +111,16 @@
 				2E1C21262AC0A87300F18804 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2EA622612ACAFDFF009DE369 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				2E12770C2AC0DC0B00323964 /* Bloodthirster.mp3 */,
+				2E12770E2AC0DC3F00323964 /* The Devil In I.mp3 */,
+				2E1277102AC0DC5500323964 /* People = Shit.mp3 */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +181,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1277112AC0DC5500323964 /* People = Shit.mp3 in Resources */,
 				2E1C21272AC0A87300F18804 /* Preview Assets.xcassets in Resources */,
+				2E12770F2AC0DC3F00323964 /* The Devil In I.mp3 in Resources */,
+				2E12770D2AC0DC0B00323964 /* Bloodthirster.mp3 in Resources */,
 				2E1C21242AC0A87300F18804 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1C21222AC0A87100F18804 /* ContentView.swift in Sources */,
+				2E1C21222AC0A87100F18804 /* LibraryView.swift in Sources */,
+				2E0123A52ACF48AD00A16E02 /* MusicModel.swift in Sources */,
+				2E9113252ACE037900C39453 /* Queue.swift in Sources */,
+				2E1277062AC0CFD000323964 /* MusicView.swift in Sources */,
 				2E1C21202AC0A87100F18804 /* AmusicaApp.swift in Sources */,
+				2E12770B2AC0D93A00323964 /* MusicInfo.swift in Sources */,
+				2EE7A2202AC1EEB80085C636 /* MusicManager.swift in Sources */,
+				2EFCC8152AD0193B001D32AF /* UIImageExtension.swift in Sources */,
+				2EFCC8172AD01989001D32AF /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +341,7 @@
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Amusica/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +371,7 @@
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Amusica/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
