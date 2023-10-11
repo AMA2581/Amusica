@@ -21,6 +21,7 @@
 		2EE7A2202AC1EEB80085C636 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7A21F2AC1EEB80085C636 /* MusicManager.swift */; };
 		2EFCC8152AD0193B001D32AF /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCC8142AD0193B001D32AF /* UIImageExtension.swift */; };
 		2EFCC8172AD01989001D32AF /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCC8162AD01989001D32AF /* Library.swift */; };
+		2EFFB29D2AD5D8FA009058E6 /* People You Know.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2EFFB29C2AD5D8FA009058E6 /* People You Know.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2EE7A21F2AC1EEB80085C636 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		2EFCC8142AD0193B001D32AF /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		2EFCC8162AD01989001D32AF /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = SOURCE_ROOT; };
+		2EFFB29C2AD5D8FA009058E6 /* People You Know.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "People You Know.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				2E12770C2AC0DC0B00323964 /* Bloodthirster.mp3 */,
+				2EFFB29C2AD5D8FA009058E6 /* People You Know.mp3 */,
 				2E12770E2AC0DC3F00323964 /* The Devil In I.mp3 */,
 				2E1277102AC0DC5500323964 /* People = Shit.mp3 */,
 			);
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFFB29D2AD5D8FA009058E6 /* People You Know.mp3 in Resources */,
 				2E1277112AC0DC5500323964 /* People = Shit.mp3 in Resources */,
 				2E1C21272AC0A87300F18804 /* Preview Assets.xcassets in Resources */,
 				2E12770F2AC0DC3F00323964 /* The Devil In I.mp3 in Resources */,

@@ -2,6 +2,12 @@
 //  MusicInfo.swift
 //  Amusica
 //
+// It stores information about the song and
+// we can use it later for playing the song
+// and displaying the information in MusicView
+// and BottomStatusView that you can find in
+// LibraryView
+//
 //  Created by Amir Mahdi Abravesh on 9/25/23.
 //
 
@@ -10,28 +16,17 @@ import Foundation
 import UIKit
 
 class MusicInfo: Identifiable, Equatable {
-    static func == (lhs: MusicInfo, rhs: MusicInfo) -> Bool {
-        return lhs.song == rhs.song && lhs.artist == rhs.artist && lhs.artwork == rhs.artwork
-    }
-
-    let song: String
-    let artist: String
-    let artwork: UIImage
+    let song: String // song's name
+    let artist: String // artist name
+    let artwork: UIImage // artwork Image for displaying
 
     init(song: String, artist: String, artwork: UIImage) {
         self.song = song
         self.artist = artist
         self.artwork = artwork
+    }
 
-//        let mamad = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        print(mamad)
-//        let itemsInDirectory = try! FileManager.default.contentsOfDirectory(at: mamad[0], includingPropertiesForKeys: nil)
-//        print(itemsInDirectory)
-//        let ali = Bundle.main.resourcePath
-//        print(ali)
-//        let itemsInDirectory = try! FileManager.default.contentsOfDirectory(atPath: "/Users/ama25/Documents/Amusica/Amusica/Library")
-//        print(itemsInDirectory)
-//        let fileName : NSString = NSString(string: itemsInDirectory[0])
-//        print(fileName.deletingPathExtension)
+    static func == (lhs: MusicInfo, rhs: MusicInfo) -> Bool {
+        return lhs.song == rhs.song && lhs.artist == rhs.artist && lhs.artwork == rhs.artwork
     }
 }

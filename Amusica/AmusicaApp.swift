@@ -10,8 +10,7 @@ import SwiftUI
 @main
 struct AmusicaApp: App {
     @StateObject var musicManager = MusicManager()
-    static var musicModel: [MusicModel] = [MusicModel()]
-    var flag = true
+    static var musicModel: [MusicModel] = []
 
     init() {
         let assetFolderUrl = Bundle.main.resourceURL
@@ -27,10 +26,6 @@ struct AmusicaApp: App {
 //                        print(anotherFileName.deletingPathExtension)
 //                        print(anotherFileName.pathExtension)
                         AmusicaApp.musicModel.append(MusicModel(path: item, name: anotherFileName.deletingPathExtension, ext: anotherFileName.pathExtension))
-                        if flag {
-                            AmusicaApp.musicModel.removeFirst()
-                            flag = false
-                        }
 //                        print(AmusicaApp.musicModel.count)
                     }
                 }

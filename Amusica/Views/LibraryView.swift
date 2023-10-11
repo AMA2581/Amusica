@@ -14,13 +14,12 @@ struct LibraryView: View {
     @State private var index: Int!
 
     var library: [MusicInfo] = Library.library
-    
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(library) { item in
-                    MusicSingleListView(song: item.song, 
+                    MusicSingleListView(song: item.song,
                                         artist: item.artist,
                                         artwork: item.artwork)
                         .onTapGesture {
@@ -37,6 +36,7 @@ struct LibraryView: View {
                 MusicView(musicInfo: library[index ?? 0])
             })
 
+// MARK: - BottomStatusView
             if musicManager.player != nil {
                 HStack(alignment: .center) {
                     MusicSingleListView(song: library[index ?? 0].song,
@@ -57,12 +57,18 @@ struct LibraryView: View {
                 .onTapGesture {
                     isShowingItemSheet = true
                 }
+                .sheet(isPresented: $isShowingItemSheet) {
+                    MusicView(musicInfo: library[index ?? 0])
+                }
             }
 //            .sheet(isPresented: $isShowingItemSheet) {
 //              MusicView(musicInfo: library[0])
 //            }
+                
         }
+        
     }
+    
 }
 
 #Preview {
