@@ -8,13 +8,13 @@
 import AVKit
 import Foundation
 
-class MusicModel: ObservableObject {
-    var playerItem: AVPlayerItem?       // accessing to the song
+class MusicModel: Identifiable, Equatable {
+    var playerItem: AVPlayerItem? // accessing to the song
     var metadataList: [AVMetadataItem]? // getting metadata
-    let name: String      // file name of the song
-    let ext: String       // file extension of the song
-    var track: String?    // song name
-    var artist: String?   // song's artist
+    let name: String // file name of the song
+    let ext: String // file extension of the song
+    var song: String? // song name
+    var artist: String? // song's artist
     var artwork: UIImage? // song's artwork image
 
     // for initializing an empty MusicModel
@@ -37,7 +37,7 @@ class MusicModel: ObservableObject {
 
             if let key = item.commonKey, let value = item.value {
                 if key.rawValue == "title" {
-                    track = value as? String
+                    song = value as? String
                 }
                 if key.rawValue == "artist" {
                     artist = value as? String
@@ -49,5 +49,9 @@ class MusicModel: ObservableObject {
                 }
             }
         }
+    }
+
+    static func == (lhs: MusicModel, rhs: MusicModel) -> Bool {
+        return lhs.song == rhs.song && lhs.artist == rhs.artist && lhs.artwork == rhs.artwork && lhs.name == rhs.name && lhs.ext == rhs.ext && lhs.playerItem == rhs.playerItem && lhs.metadataList == rhs.metadataList
     }
 }

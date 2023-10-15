@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct AmusicaApp: App {
     @StateObject var musicManager = MusicManager()
-    static var musicModel: [MusicModel] = []
+    static var library: [MusicModel] = []
 
     init() {
         let assetFolderUrl = Bundle.main.resourceURL
@@ -25,7 +25,7 @@ struct AmusicaApp: App {
                         let anotherFileName: NSString = NSString(string: parsed)
 //                        print(anotherFileName.deletingPathExtension)
 //                        print(anotherFileName.pathExtension)
-                        AmusicaApp.musicModel.append(MusicModel(path: item, name: anotherFileName.deletingPathExtension, ext: anotherFileName.pathExtension))
+                        AmusicaApp.library.append(MusicModel(path: item, name: anotherFileName.deletingPathExtension, ext: anotherFileName.pathExtension))
 //                        print(AmusicaApp.musicModel.count)
                     }
                 }

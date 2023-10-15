@@ -16,9 +16,9 @@ import UIKit
 struct Library {
     static var library: [MusicInfo] {
         var temp: [MusicInfo] = []
-        for item in AmusicaApp.musicModel {
+        for item in AmusicaApp.library {
             // adding items to the list, library
-            temp.append(MusicInfo(song: item.track!, // handle the optional
+            temp.append(MusicInfo(song: item.song!, // handle the optional
                       artist: item.artist!,          // handle the optional
                       artwork: item.artwork!))       // handle the optional
         }

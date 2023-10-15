@@ -13,20 +13,18 @@ struct LibraryView: View {
     @EnvironmentObject private var musicManager: MusicManager
     @State private var index: Int!
 
-    var library: [MusicInfo] = Library.library
+    var library: [MusicModel] = AmusicaApp.library
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(library) { item in
-                    MusicSingleListView(song: item.song,
-                                        artist: item.artist,
-                                        artwork: item.artwork)
+                    MusicSingleListView(song: item.song ?? "Unknown",
+                                        artist: item.artist ?? "Unknown",
+                                        artwork: item.artwork!) // handle the optional
                         .onTapGesture {
-//                            isShowingItemSheet = true
                             musicManager.stopMusic()
-//                            musicManager = MusicManager(songName: item.song)
-                            musicManager.playMusic(item.song)
+                            musicManager.playMusic(item.name, extension: item.ext)
                             index = library.firstIndex(of: item) ?? 0
                         }
                 }
@@ -39,9 +37,9 @@ struct LibraryView: View {
 // MARK: - BottomStatusView
             if musicManager.player != nil {
                 HStack(alignment: .center) {
-                    MusicSingleListView(song: library[index ?? 0].song,
-                                        artist: library[index ?? 0].artist,
-                                        artwork: library[index ?? 0].artwork)
+                    MusicSingleListView(song: library[index ?? 0].song ?? "Unknown",
+                                        artist: library[index ?? 0].artist ?? "Unknown",
+                                        artwork: library[index ?? 0].artwork!) // handle the optional
                     Spacer()
                     Button {
                         musicManager.playPauseToggle()
@@ -74,35 +72,4 @@ struct LibraryView: View {
 #Preview {
     LibraryView()
         .environmentObject(MusicManager())
-}
-
-// MARK: - MusicSingleListView
-
-struct MusicSingleListView: View {
-    let song: String
-    let artist: String
-    let artwork: UIImage
-
-    var body: some View {
-        HStack {
-            Image(uiImage: artwork)
-                .resizable()
-                .frame(width: 50.0, height: 50.0)
-                .cornerRadius(15)
-
-            VStack(alignment: .leading) {
-                Text(song)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 22))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                Text(artist)
-                    .fontWeight(.medium)
-                    .font(.system(size: 18))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                    .opacity(0.6)
-            }.padding(.horizontal, 15.0)
-        }
-    }
 }

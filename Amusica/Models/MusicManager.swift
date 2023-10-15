@@ -18,18 +18,26 @@
 import AVFoundation
 import Foundation
 
-class MusicManager: ObservableObject {
+class MusicManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var player: AVAudioPlayer!
-    @Published private(set) var isPlaying: Bool = false       // returns the playing status
-    @Published private(set) var isRepeatingOne: Bool = false  // returns the repeating one song status
-    
+    @Published private(set) var isPlaying: Bool = false // returns the playing status
+    @Published private(set) var isRepeatingOne: Bool = false // returns the repeating one song status
+
+    override init() {
+        super.init()
+    }
 
     // playes the music for the first time
-    func playMusic(_ songName: String) {
-        let url = Bundle.main.url(forResource: songName, withExtension: "mp3")
-        player = try! AVAudioPlayer(contentsOf: url!) // handle the try and catch
-        player.play()
-        isPlaying = true
+    func playMusic(_ songName: String, extension ext: String) {
+        let url = Bundle.main.url(forResource: songName, withExtension: ext)
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player.delegate = self
+            player.play()
+            isPlaying = true
+        } catch {
+            print("file did not found")
+        }
     }
 
     // stops the Music
@@ -50,12 +58,23 @@ class MusicManager: ObservableObject {
             isPlaying = true
         }
     }
-    
+
     // toggles between repeat for one song or no
     func toggleRepeatOne() {
         guard let player = player else { return }
-        
+
         player.numberOfLoops = player.numberOfLoops == 0 ? -1 : 0
         isRepeatingOne = player.numberOfLoops != 0
+    }
+
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if !isRepeatingOne {
+            // play next
+            print("play next song")
+        } else {
+            // done playing
+            print("Did finish Playing")
+            isPlaying = false
+        }
     }
 }
