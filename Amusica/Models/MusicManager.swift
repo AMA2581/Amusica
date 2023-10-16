@@ -20,6 +20,11 @@ import Foundation
 
 class MusicManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var player: AVAudioPlayer!
+    var nextSong: MusicModel!
+    var previousSong: MusicModel!
+    var library = AmusicaApp.library
+    @Published private(set) var currentMusic: MusicModel!
+    @Published private(set) var index: Int = 0
     @Published private(set) var isPlaying: Bool = false // returns the playing status
     @Published private(set) var isRepeatingOne: Bool = false // returns the repeating one song status
 
@@ -33,6 +38,7 @@ class MusicManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         do {
             player = try AVAudioPlayer(contentsOf: url!)
             player.delegate = self
+            currentMusic = library[index]
             player.play()
             isPlaying = true
         } catch {
@@ -70,11 +76,56 @@ class MusicManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         if !isRepeatingOne {
             // play next
-            print("play next song")
-        } else {
-            // done playing
-            print("Did finish Playing")
             isPlaying = false
+            playNext()
+        } else {
+            // loop same song
+            print("loops the same song")
+            isPlaying = false
+        }
+    }
+
+    // saves the next song
+    func nextSong(_ musicModel: MusicModel) {
+        nextSong = musicModel
+    }
+
+    // saves the previous song
+    func previousSong(_ musicModel: MusicModel) {
+        previousSong = musicModel
+    }
+
+    // playes the next song
+    func playNext() {
+        setNextSongIndex()
+        nextSong(library[index])
+        playMusic(nextSong.name, extension: nextSong.ext)
+    }
+
+    // playes the previous song
+    func playPrevious() {
+        setPreviousSongIndex()
+        previousSong(library[index])
+        playMusic(previousSong.name, extension: previousSong.ext)
+    }
+
+    func setIndex(_ index: Int) {
+        self.index = index
+    }
+
+    func setNextSongIndex() {
+        if index < (library.count - 1) {
+            index = index + 1
+        } else {
+            index = 0
+        }
+    }
+
+    func setPreviousSongIndex() {
+        if index > 0 {
+            index = index - 1
+        } else {
+            index = library.count - 1
         }
     }
 }

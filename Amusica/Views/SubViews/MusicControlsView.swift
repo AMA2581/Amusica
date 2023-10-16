@@ -11,6 +11,7 @@ struct MusicControlsView: View {
     @EnvironmentObject private var musicManager: MusicManager
     let shuffle: Bool
     let color: Color
+    
 
     var body: some View {
         HStack(spacing: 30) {
@@ -19,10 +20,14 @@ struct MusicControlsView: View {
                 .frame(width: 35, height: 30)
                 .foregroundColor(color)
                 .disabled(shuffle)
-            Image(systemName: "backward.end.fill")
-                .resizable()
-                .frame(width: 35, height: 35)
-                .foregroundColor(color)
+            Button {
+                musicManager.playPrevious()
+            } label: {
+                Image(systemName: "backward.end.fill")
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .foregroundColor(color)
+            }
             Button {
                 musicManager.playPauseToggle()
             } label: {
@@ -31,10 +36,14 @@ struct MusicControlsView: View {
                     .frame(width: 60, height: 60)
                     .foregroundColor(color)
             }
-            Image(systemName: "forward.end.fill")
-                .resizable()
-                .frame(width: 35, height: 35)
-                .foregroundColor(color)
+            Button {
+                musicManager.playNext()
+            } label: {
+                Image(systemName: "forward.end.fill")
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .foregroundColor(color)
+            }
             Button {
                 musicManager.toggleRepeatOne()
             } label: {
